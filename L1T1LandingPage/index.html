@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyMart</title>
 
-	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
-	<!-- iconoir icon -->
+    <!-- iconoir icon -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css"
     />
-	<!-- Font -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="top-bar">
@@ -40,79 +42,189 @@
         </ul>
       </div>
     </div>
-	<header>
-		<div>
-			<div class="menu"><i class="iconoir-menu color-primary"></i></div>
-			<h1 class="color-primary">MyMart</h1>
-		</div>
-		<div class="search">
-			<i class="iconoir-search color-primary"></i>
-			<input type="text" placeholder="Search essentials, grocerie">
-		</div>
-		<div>
-			<div>
-				<i class="iconoir-user color-primary"></i>
-				<p>Sign Up/Sign In</p>
-			</div>
-			<div>
-				<i class="iconoir-cart color-primary"></i>
-				<p>Cart</p>
-			</div>
-		</div>
-	</header>
-	<hr>
-	<nav>
-		<ul class="quick-nav">
-			<li>
-				<p>Groceries</p>
-				<i class="iconoir-nav-arrow-down"></i>
-			</li>
-			<li>
-				<p>Premiun Fruits</p>
-				<i class="iconoir-nav-arrow-down color-primary"></i>
-			</li>
-			<li>
-				<p>Home &amp; Kitchen</p>
-				<i class="iconoir-nav-arrow-down color-primary"></i>
-			</li>
-			<li>
-				<p>Fashion</p>
-				<i class="iconoir-nav-arrow-down color-primary"></i>
-			</li>
-			<li>
-				<p>Electronics</p>
-				<i class="iconoir-nav-arrow-down color-primary"></i>
-			</li>
-			<li>
-				<p>Beauty</p>
-				<i class="iconoir-nav-arrow-down color-primary"></i>
-			</li>
-			<li>
-				<p>Home Improvement</p>
-				<i class="iconoir-nav-arrow-down color-primary"></i>
-			</li>
-			<li>
-				<p>Sports, Toys &amp; Laggage</p>
-				<i class="iconoir-nav-arrow-down color-primary"></i>
-			</li>
-		</ul>
-	</nav>
-	<hr>
-	<div class="slider">
-		<div class="left">
-			<i class="iconoir-nav-arrow-left"></i>
-		</div>
-		<div class="right">
-			<i class="iconoir-nav-arrow-right"></i>
-		</div>
-		<div class="slider-text">
-			<p>Best Deal Online on smart watches<br/><span>SMART WEARABLE</span><br/>UP to 80% OFF</p>
-		</div>
-		<div class="slider-product">
-			<div class="upper-circle"></div>
-			<img src="images/smart-watch.png" alt="smart watch">
-			<div class="lower-circle"></div>
-		</div>
-	</div>
+    <header>
+      <div>
+        <div class="menu"><i class="iconoir-menu color-primary"></i></div>
+        <h1 class="color-primary">MyMart</h1>
+      </div>
+      <div class="search">
+        <i class="iconoir-search color-primary"></i>
+        <input type="text" placeholder="Search essentials, grocerie" />
+      </div>
+      <div>
+        <div>
+          <i class="iconoir-user color-primary"></i>
+          <p>Sign Up/Sign In</p>
+        </div>
+        <div>
+          <i class="iconoir-cart color-primary"></i>
+          <p>Cart</p>
+        </div>
+      </div>
+    </header>
+    <hr />
+    <nav>
+      <ul class="quick-nav">
+        <li id="selected">
+          <p>All</p>
+          <i class="iconoir-nav-arrow-down"></i>
+        </li>
+        <li>
+          <p>Groceries</p>
+          <i class="iconoir-nav-arrow-down color-primary"></i>
+        </li>
+        <li>
+          <p>Premiun Fruits</p>
+          <i class="iconoir-nav-arrow-down color-primary"></i>
+        </li>
+        <li>
+          <p>Home &amp; Kitchen</p>
+          <i class="iconoir-nav-arrow-down color-primary"></i>
+        </li>
+        <li>
+          <p>Fashion</p>
+          <i class="iconoir-nav-arrow-down color-primary"></i>
+        </li>
+        <li>
+          <p>Electronics</p>
+          <i class="iconoir-nav-arrow-down color-primary"></i>
+        </li>
+        <li>
+          <p>Beauty</p>
+          <i class="iconoir-nav-arrow-down color-primary"></i>
+        </li>
+        <li>
+          <p>Home Improvement</p>
+          <i class="iconoir-nav-arrow-down color-primary"></i>
+        </li>
+        <li>
+          <p>Sports, Toys &amp; Laggage</p>
+          <i class="iconoir-nav-arrow-down color-primary"></i>
+        </li>
+      </ul>
+    </nav>
+    <hr />
+    <main>
+      <div class="slider">
+        <div class="left">
+          <i class="iconoir-nav-arrow-left"></i>
+        </div>
+        <div class="right">
+          <i class="iconoir-nav-arrow-right"></i>
+        </div>
+        <div class="slider-text">
+          <p>
+            Best Deal Online on smart watches<br /><span>SMART WEARABLE</span
+            ><br />UP to 80% OFF
+          </p>
+        </div>
+        <div class="slider-product">
+          <div class="upper-circle"></div>
+          <img src="images/smart-watch.png" alt="smart watch" />
+          <div class="lower-circle"></div>
+        </div>
+      </div>
+      <div class="products">
+        <div class="products-heading">
+          <p class="heading">Grab the best deal on <span>Smartphones</span></p>
+          <div>
+            <p class="view-all">View All</p>
+            <i class="iconoir-nav-arrow-right color-primary"></i>
+          </div>
+        </div>
+        <div class="products-list">
+          <div class="product-type-1">
+            <div class="product-image">
+              <div class="offer">
+                <p>56% <br />OFF</p>
+              </div>
+              <img src="images/galaxy-s22-ultra.png" alt="smart watch" />
+            </div>
+            <div class="product-details">
+              <p class="product-name">Galaxy S22</p>
+              <p class="product-price">
+                &#8377;32,999 &nbsp;&nbsp;
+				<span class="strike">&#8377;74,999</span
+                >
+              </p>
+              <hr />
+              <p class="product-discount">Save - &#8377;42,000</p>
+            </div>
+          </div>
+          <div class="product-type-1">
+            <div class="product-image">
+              <div class="offer">
+                <p>20% <br />OFF</p>
+              </div>
+              <img src="images/galaxy-m53.png" alt="smart watch" />
+            </div>
+            <div class="product-details">
+              <p class="product-name">Galaxy M53 (4GB | 64 GB )</p>
+              <p class="product-price">
+                &#8377;1,099.00 &nbsp;&nbsp;<span class="strike"
+                  >&#8377;1,111.00</span
+                >
+              </p>
+              <hr />
+              <p class="product-discount">Save - &#8377;1,199.00</p>
+            </div>
+          </div>
+          <div class="product-type-1 product-selected">
+            <div class="product-image">
+              <div class="offer">
+                <p>20% <br />OFF</p>
+              </div>
+              <img src="images/galaxy-m33.png" alt="smart watch" />
+            </div>
+            <div class="product-details">
+              <p class="product-name">Galaxy M33 (4GB | 64 GB )</p>
+              <p class="product-price">
+                &#8377;1,099.00 &nbsp;&nbsp;<span class="strike"
+                  >&#8377;1,111.00</span
+                >
+              </p>
+              <hr />
+              <p class="product-discount">Save - &#8377;1,199.00</p>
+            </div>
+          </div>
+          <div class="product-type-1">
+            <div class="product-image">
+              <div class="offer">
+                <p>20% <br />OFF</p>
+              </div>
+              <img src="images/galaxy-m13.png" alt="smart watch" />
+            </div>
+            <div class="product-details">
+              <p class="product-name">Galaxy M13 (4GB | 64 GB )</p>
+              <p class="product-price">
+                &#8377;1,099.00 &nbsp;&nbsp;<span class="strike"
+                  >&#8377;1,111.00</span
+                >
+              </p>
+              <hr />
+              <p class="product-discount">Save - &#8377;1,199.00</p>
+            </div>
+          </div>
+          <div class="product-type-1">
+            <div class="product-image">
+              <div class="offer">
+                <p>20% <br />OFF</p>
+              </div>
+              <img src="images/galaxy-s22.png" alt="smart watch" />
+            </div>
+            <div class="product-details">
+              <p class="product-name">Galaxy S22 Ultra</p>
+              <p class="product-price">
+                &#8377;1,099.00 &nbsp;&nbsp;<span class="strike"
+                  >&#8377;1,111.00</span
+                >
+              </p>
+              <hr />
+              <p class="product-discount">Save - &#8377;1,199.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
