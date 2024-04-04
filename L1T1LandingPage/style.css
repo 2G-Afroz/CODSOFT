@@ -6,6 +6,62 @@
 	--color-heading-text: #222222;
 	--color-border: #EDEDED;
 	--color-green: #249B3E;
+
+	/* Colors for cards */
+	/* iphone */
+	--icolor-bg-primary: #313131;
+	--icolor-bg-secondary: #414141;
+	/* realme */
+	--rcolor-bg-pimary: #FFF3CC;
+	--rcolor-bg-secondary: #F6DE8D;
+	/* xiomi */
+	--xcolor-bg-primary: #FFECDF;
+	--xcolor-bg-secondary: #FFD1B0;
+}
+/* iphone */
+.bg-iprimary {
+	background-color: var(--icolor-bg-primary);
+}
+.bg-isecondary {
+	background-color: var(--icolor-bg-secondary);
+}
+.iborder {
+	border: 8px solid var(--icolor-bg-primary);
+}
+.ishadow {
+	box-shadow: 0 0 0 2px var(--icolor-bg-secondary);
+}
+/* realme */
+.bg-rprimary {
+	background-color: var(--rcolor-bg-pimary);
+}
+.bg-rsecondary {
+	background-color: var(--rcolor-bg-secondary);
+}
+.rborder {
+	border: 8px solid var(--rcolor-bg-pimary);
+}
+.rshadow {
+	box-shadow: 0 0 0 2px var(--rcolor-bg-secondary);
+}
+/* xiomi */
+.bg-xprimary {
+	background-color: var(--xcolor-bg-primary);
+}
+.bg-xsecondary {
+	background-color: var(--xcolor-bg-secondary);
+}
+.xborder {
+	border: 8px solid var(--xcolor-bg-primary);
+}
+.xshadow {
+	box-shadow: 0 0 0 2px var(--xcolor-bg-secondary);
+}
+.white {
+	color: white;
+}
+.text-black {
+	color: var(--color-heading-text);
 }
 
 * {
@@ -288,7 +344,6 @@ main {
 .product-name {
 	font-size: 0.875rem;
 	color: var(--color-heading-text);
-
 }
 .strike {
 	color: var(--color-text);
@@ -309,8 +364,8 @@ main {
 	background-color: var(--color-light-dark);
 	border-radius: 50%;
 	padding: 24px 0;
-	width: 150px;
-	height: 150px;
+	width: 132px;
+	height: 132px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -322,4 +377,60 @@ main {
 	display: flex;
 	justify-content: center;
 	padding: 16px;
+}
+/* Product type 3 */
+.product-type-3 {
+	width: 389px;
+	height: 207px;
+	border-radius: 16px;
+	padding: 16px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	position: relative;
+	z-index: 0;
+	overflow: hidden;
+}
+.product-3-decoration {
+	position: absolute;
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	z-index: -1;
+	right: -50px;
+	top: -70px;
+}
+.product-type-3 .product-details {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: start;
+}
+.product-type-3 .product-details .product-card-name {
+	display: inline;
+	padding: 9px 20px;
+	border-radius: 8px;
+	font-weight: 200;
+}
+.product-type-3 .product-details .offer {
+	font-size: 1.25rem;
+	font-weight: 500;
+}
+.product-type-3 .product-image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.product-type-3 .product-image img{
+	height: 100%;
+}
+.product-logo {
+	width: 64px;
+	height: 64px;
+	border-radius: 16px;
+	overflow: hidden;
+}
+.product-logo img{
+	width: 100%;
+	height: 100%;
 }
