@@ -14,7 +14,7 @@
 <body>
 	<main>
 		<div class="texts">
-			<p id="history">2893+239</p>
+			<p id="history"></p>
 			<input type="text" id="input" disabled>
 			<input type="text" id="result" disabled>
 		</div>
@@ -50,7 +50,7 @@
 			<button onclick="addToInput('+')" class="bg-secondary">+</button>
 			<button onclick="addToInput('0')" class="zero">0</button>
 			<button onclick="addToInput('.')">.</button>
-			<button class="bg-secondary">=</button>
+			<button onclick="setResult()" class="bg-secondary">=</button>
 		</div>
 	</main>
 	<script src="script.js"></script>

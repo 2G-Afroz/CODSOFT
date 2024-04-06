@@ -3,8 +3,8 @@
 	--color-bg-dark: #C1C8D0;
 	--color-secondary: #FFCE94;
 	--color-text: #636363;
-	--color-text-result: #666666;
-	--color-text-input: #8A8A8A;
+	--color-text-result: #8A8A8A;
+	--color-text-input: #666666;
 	--color-text-history: #A8A8A8;
 }
 * {
@@ -64,12 +64,12 @@ button {
 	border-radius: 12px;
 	box-shadow: 5px 5px 8px #caced4,
              	-5px -5px 8px #f6fcff;
-	font-size: 1.5rem;
+	font-size: 2rem;
 }
 button:active {
 	box-shadow: inset 5px 5px 8px #caced4,
              	inset -5px -5px 8px #f6fcff;
-	font-size: 1.4rem;
+	font-size: 1.9rem;
 }
 .zero {
 	grid-column: span 2;
@@ -93,7 +93,7 @@ button:active {
 	width: 100%;
 	color: var(--color-text-input);
 	text-align: end;
-	font-size: 1.5rem;
+	font-size: 2.12rem;
 }
 #result {
 	border: none;
@@ -101,5 +101,5 @@ button:active {
 	width: 100%;
 	color: var(--color-text-result);
 	text-align: end;
-	font-size: 2.5rem;
+	font-size: 1.5rem;
 }
