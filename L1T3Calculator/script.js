@@ -1,6 +1,7 @@
 const history = document.querySelector("#history");
 const input = document.querySelector("#input");
 const result = document.querySelector("#result");
+const btnEqual = document.querySelector("#btn-equal");
 
 function addToInput(value) {
   switch (value) {
@@ -43,6 +44,8 @@ function clearInput() {
 }
 
 function setResult() {
+  btnEqual.disabled = true;
+
   let expression = input.value;
   input.value = "";
 
@@ -58,7 +61,10 @@ function setResult() {
     }
     result.value = "";
     result.classList.remove("result-animation");
+    btnEqual.disabled = false;
   }, 250);
+  history.innerText = history.innerText + expression + " = " + result.value + "\n";
+  history.scrollTop = history.scrollHeight;
 }
 
 function deleteFromInput() {

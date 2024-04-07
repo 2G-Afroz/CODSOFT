@@ -84,9 +84,14 @@ button:active {
 
 #history {
 	width: 100%;
+	flex-basis: 135px;
+	text-align: end;
 	color: var(--color-text-history);
 	font-size: 1.25rem;
-	margin-bottom: 24px;
+	overflow: scroll;
+	margin-bottom: 16px;
+	padding: 8px;
+	overflow: auto;
 }
 #input {
 	border: none;
