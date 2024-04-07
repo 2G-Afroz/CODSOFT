@@ -1,15 +1,12 @@
 const history = document.querySelector("#history");
 const input = document.querySelector("#input");
 const result = document.querySelector("#result");
-let decimal = true;
 
 function addToInput(value) {
   switch (value) {
     case ".":
-      if (!decimal) {
+      if (!canEnterDecimal()) {
         return;
-      } else {
-        decimal = false;
       }
       break;
     case "÷":
@@ -20,22 +17,18 @@ function addToInput(value) {
         getLastChar() === "−"
       )
       input.value = input.value.slice(0, -1);
-      decimal = true;
       break;
     case "×":
       if (getLastChar() === "×" || input.value === "" || getLastChar() === "−" || getLastChar() === "+") return;
       if (getLastChar() === "÷") input.value = input.value.slice(0, -1);
-      decimal = true;
       break;
     case "+":
       if (getLastChar() === "+") return;
       if (getLastChar() === "−") input.value = input.value.slice(0, -1);
-      decimal = true;
       break;
     case "−":
       if (getLastChar() === "−") return;
       if (getLastChar() === "+") input.value = input.value.slice(0, -1);
-      decimal = true;
       break;
   }
   input.value += value;
@@ -46,6 +39,7 @@ function addToInput(value) {
 function clearInput() {
   input.value = "";
   result.value = "";
+  decimal = true;
 }
 
 function setResult() {
@@ -90,4 +84,14 @@ function setPartialResult(value) {
   let r = eval(parseInput(value));
   if (r === Infinity || isNaN(r)) result.value = "";
   else result.value = r;
+}
+
+function canEnterDecimal() {
+  for (let i = input.value.length - 1; i >= 0; i--) {
+    if (isNaN(input.value[i])) {
+      if (input.value[i] === ".") return false;
+      else return true;
+    }
+    else if (i === 0) return true;
+  }
 }
