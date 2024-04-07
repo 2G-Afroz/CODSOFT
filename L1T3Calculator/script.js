@@ -87,6 +87,8 @@ function setPartialResult(value) {
 }
 
 function canEnterDecimal() {
+  if(input.value.length === 0) return true;
+
   for (let i = input.value.length - 1; i >= 0; i--) {
     if (isNaN(input.value[i])) {
       if (input.value[i] === ".") return false;
