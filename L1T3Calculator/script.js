@@ -13,29 +13,34 @@ function addToInput(value) {
       }
       break;
     case "÷":
-      if (getLastChar() === "÷" || input.value === "") return;
+      if (getLastChar() === "÷" || input.value === "" || getLastChar() === "−" || getLastChar() === "+") return;
       if (
         getLastChar() === "×" ||
         getLastChar() === "+" ||
         getLastChar() === "−"
       )
-        input.value = input.value.slice(0, -1);
+      input.value = input.value.slice(0, -1);
+      decimal = true;
       break;
     case "×":
-      if (getLastChar() === "×" || input.value === "") return;
+      if (getLastChar() === "×" || input.value === "" || getLastChar() === "−" || getLastChar() === "+") return;
       if (getLastChar() === "÷") input.value = input.value.slice(0, -1);
+      decimal = true;
       break;
     case "+":
       if (getLastChar() === "+") return;
       if (getLastChar() === "−") input.value = input.value.slice(0, -1);
+      decimal = true;
       break;
     case "−":
       if (getLastChar() === "−") return;
       if (getLastChar() === "+") input.value = input.value.slice(0, -1);
+      decimal = true;
       break;
   }
   input.value += value;
-  if (!isNaN(value)) setPartialResult();
+  input.scrollLeft = input.scrollWidth;
+  if (!isNaN(value)) setPartialResult(input.value);
 }
 
 function clearInput() {
@@ -44,8 +49,22 @@ function clearInput() {
 }
 
 function setResult() {
-  input.value = eval(parseInput());
-  result.value = "";
+  let expression = input.value;
+  input.value = "";
+
+  result.classList.add("result-animation");
+
+  setTimeout(() => {
+    let r = eval(parseInput(expression));
+    console.log(r);
+    if (r === Infinity || isNaN(r) || undefined) input.value = "";
+    else {
+      input.value = r;
+      input.scrollLeft = input.scrollWidth;
+    }
+    result.value = "";
+    result.classList.remove("result-animation");
+  }, 250);
 }
 
 function deleteFromInput() {
@@ -57,18 +76,18 @@ function getLastChar() {
   return input.value[input.value.length - 1];
 }
 
-function parseInput() {
-	let parsed = input.value;
-  while (isNaN(parsed[parsed.length - 1])) parsed = parsed.slice(0, -1);
+function parseInput(exp) {
+  if(exp === "") return "";
+  while (isNaN(exp[exp.length - 1])) exp = exp.slice(0, -1);
 
-  parsed = parsed.replace(/÷/g, "/");
-  parsed = parsed.replace(/×/g, "*");
-  parsed = parsed.replace(/−/g, "-");
-  return parsed;
+  exp = exp.replace(/÷/g, "/");
+  exp = exp.replace(/×/g, "*");
+  exp = exp.replace(/−/g, "-");
+  return exp;
 }
-function setPartialResult() {
-  let r = eval(parseInput());
-  console.log(r);
+
+function setPartialResult(value) {
+  let r = eval(parseInput(value));
   if (r === Infinity || isNaN(r)) result.value = "";
   else result.value = r;
 }

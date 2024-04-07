@@ -79,6 +79,7 @@ button:active {
 	display: flex;
 	flex-direction: column;
 	align-items: end;
+	position: relative;
 }
 
 #history {
@@ -94,6 +95,7 @@ button:active {
 	color: var(--color-text-input);
 	text-align: end;
 	font-size: 2.12rem;
+	overflow: auto;
 }
 #result {
 	border: none;
@@ -102,4 +104,21 @@ button:active {
 	color: var(--color-text-result);
 	text-align: end;
 	font-size: 1.5rem;
+	position: relative;
+}
+
+/* For animation */
+@keyframes slideIn {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		font-size: 2.12rem;
+		color: var(--color-text-input);
+		transform: translateY(-28px);
+	}
+}
+
+.result-animation {
+	animation: slideIn 0.25s linear backwards;
 }
